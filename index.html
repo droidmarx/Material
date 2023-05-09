@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="https://as1.ftcdn.net/v2/jpg/01/79/83/12/1000_F_179831290_j925jTItog2exf6dNKVxhuRWBTVJEP5o.jpg">
+  <title>Lançar Material</title>
+</head>
+
+<body>
+  <main>
+    <input id="number" type="text" placeholder="Número da atividade" maxlength="9">
+    <button onclick="handleClean()">Lançar</button>
+  </main>
+
+  <script>
+    function handleClean() {
+      const number = document.querySelector("#number").value
+      
+      const endpoint = `https://supplychain.vicky.telefonica.com/?workId=${number}&userlogin=GVT&atoken=gvt`
+
+      window.location.assign(endpoint)
+    }
+  </script>
+</body>
+
+<style>
+  body{
+      background-color: rgb(255, 0, 0);
+      display: flex;
+      padding: 0;
+      }
+  
+  main {
+      padding: 2vmax;
+      margin: 0 auto;
+      background: #6C7A89;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      transform: .8s;
+      }
+  
+  main:hover {
+      transform: .8s;
+      background-color: #5d7186;
+  }    
+  
+  input{
+      margin: 20px;
+      text-overflow: clip;
+      text-align: center;
+      align-items: row;
+      font-size: large;
+      border-radius: 5px;
+      background-color: rgb(216, 233, 226);
+      border-style: none;
+  }
+
+  
+  button, a{
+      
+      color: #6C7A89;
+      font-size: large;
+      display: flex;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 5px;
+      border: none;
+      transition: .2s;
+  }
+  
+  button:hover{
+      
+      text-decoration: none;
+      color: #000000;
+      font-size: large;
+      background-color:   rgb(255, 0, 0);
+      transition: .2;
+  }
+  
+  </style>
+  </html>
+  
+  
